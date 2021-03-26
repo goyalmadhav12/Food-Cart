@@ -1,0 +1,10 @@
+.box
+{
+    box-shadow: 5px 5px 50px black;
+}
+.cnt
+{
+    margin:0px;
+    display:flex;
+    font-size: 20px;
+}
