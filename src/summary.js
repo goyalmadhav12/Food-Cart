@@ -7,7 +7,7 @@ function Summary(props) {
     const [arr,setArr]=useState([]);
     let brr=[];
     useEffect(()=>{
-        while(main.length!=0)
+        while(main.length!==0)
         {
             let count=0;
             let check=main[0].name;
@@ -24,7 +24,7 @@ function Summary(props) {
                 }
             }
             let total=price*count;
-            if(brr.length!=0)
+            if(brr.length!==0)
             {
                 total=brr[brr.length-1].total+price*count;
             }
@@ -36,7 +36,7 @@ function Summary(props) {
     return (
         <div style={{display:'flex',height:'100%',width:'100%',alignItems:'center',justifyContent:'center',flexDirection:'column'}}>
             <div className='box' style={{backgroundColor:'aqua',minHeight:'20%',minWidth:'20%',display:'flex',flexDirection:'column',borderRadius:20,boxShadow:'10 20 20'}}>
-            {(arr.length!=0)?arr.map((items)=>{
+            {(arr.length!==0)?arr.map((items)=>{
                 return(
                     <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between',margin:10,color:'blue',boxSizing:'border-box'}}>
                         <p className='cnt'>{items.name}:</p>
@@ -51,7 +51,7 @@ function Summary(props) {
             </div>
             }
             </div>
-            <div style={{color:'#337811',fontSize:35,backgroundColor:'aqua',margin:10,borderRadius:20,minWidth:'20%'}}>Grand Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs. {(arr.length!=0)?arr[arr.length-1].total:0}</div>
+            <div style={{color:'#337811',fontSize:35,backgroundColor:'aqua',margin:10,borderRadius:20,minWidth:'20%'}}>Grand Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs. {(arr.length!==0)?arr[arr.length-1].total:0}</div>
         </div>
     )
 }
